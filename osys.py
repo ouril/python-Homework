@@ -1,6 +1,9 @@
+# -*- coding: utf-8 -*-
+
 import os
 import sys
-import psutil # модуль для управлением процессами (внешний, требует установки)
+import psutil
+#модуль для управлением процессами внешний, требует установки
 import shutil   # модуль для манипуляией с файлами
 
 # функции для дальнейшей программы которые не обращаются к переменным модуля
@@ -39,14 +42,15 @@ def mydel():
 
 # сама программа
 
-log = input("Password!\n")
+log = str(input("Password!\n"))
 
 while log:
-    if log == "password":
+    if log == 'password':
         print("Давайте поработаем\n")
         break
     else:
-        log = input("Password!\n")
+        log = str(input("Password!\n"))
+
 help_list()
 
 doing = 'a'
@@ -57,7 +61,7 @@ while doing:
     doing = str(input("\nВведите команду\n>> "))
     print()
 
-    if doing == "s":
+    if doing == 's':
         print("Платформа ОС " , sys.platform)
         print("Кодировка файловой системы ", sys.getdefaultencoding())
         print("Имя текущего директория " , os.getcwd())
