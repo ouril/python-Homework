@@ -2,7 +2,7 @@
 # функция считывает строку и решает уравнение заданного вида
 
 
-
+# функция которая считывает написанное
 def take_drob(exp):
 
     in_num = False
@@ -74,7 +74,7 @@ def trans(listi):
     drobL[0] = (int(drobL[0]) + int(drobL[1]) * int(ceil)) * sign
     drobL[1] = int(drobL[1])
 
-    print(drobL)
+    print(drobL) # Отладка
     return tuple(drobL)
 
 
@@ -84,7 +84,7 @@ def sum_drob(list):
     chisl = 0
 
     for i in list:
-        print(i)
+        print(i)# Отладка
         chislit = i[0]
         if num != i[1]:
             chislit *= num
@@ -95,7 +95,7 @@ def sum_drob(list):
             chisl += chislit
 
     result = (chisl, num)
-    print(result)
+    print(result)# Отладка
 
     return result
 

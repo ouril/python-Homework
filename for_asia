@@ -1,0 +1,21 @@
+locations = [23,26,17,30]
+
+location_count = 23
+
+levels = [x for x in range(0, 100)]
+mas = [5, 10, 15]
+def sunsuk():
+    print('             sunduc')
+liv_loc = 0
+j = 0
+for i in levels:
+    print("{0}    {1}".format(i, liv_loc))
+
+    if liv_loc == locations[j]:
+        print("             end loc")
+        liv_loc = 0
+        if j < len(locations): j += 1
+
+    if liv_loc == 5 or liv_loc == 10 or liv_loc == 15:
+        sunsuk()
+    liv_loc += 1
